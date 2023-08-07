@@ -13,7 +13,7 @@ const ClothingForm = ({ onAddClothing }) => {
   useEffect(() => {
     // Fetch data from the API
     axios
-      .get("http://localhost:5000/api/options")
+      .get("http://127.0.0.1:5000/api/options")
       .then((response) => {
         setOptions(response.data);
         console.log(response);

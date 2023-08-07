@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
 import AddPiecePage from "./pages/AddPiecePage";
 import TablePage from "./pages/TablePage";
-import CombinePage from "./pages/Combine";
+import CombinePage from "./pages/CombinePage";
+import Register from "./pages/RegisterPage";
+import Home from "./pages/HomePage";
+import Login from "./pages/LoginPage";
 
 const App = () => {
   const [clothes, setClothes] = useState([]);
@@ -20,12 +22,16 @@ const App = () => {
 
   return (
     <Router>
+      <meta httpEquiv="Content-Security-Policy" content="script-src 'self' 'wasm-unsafe-eval' 'inline-speculation-rules' 'unsafe-inline'"></meta>
       <div>
-        <Header />
         <div className="container">
           <Routes>
-            <Route
+          <Route
               path="/"
+              element={<Home/>}
+            />
+            <Route
+              path="/addClothes"
               element={<AddPiecePage onAddClothing={addClothing} />}
             />
             <Route
@@ -38,7 +44,16 @@ const App = () => {
               path="/combine"
               element={<CombinePage clothes={clothes} />}
             />
+              <Route
+              path="/register"
+              element={<Register/>}
+            />
+               <Route
+              path="/login"
+              element={<Login/>}
+            />
           </Routes>
+          
         </div>
       </div>
     </Router>

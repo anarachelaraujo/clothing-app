@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Header from "../components/Header";
 
 const TopCarousel = ({ clothes }) => {
   let i = 0;
@@ -99,6 +100,7 @@ const AccessoriesCarousel = ({ clothes }) => {
 const CombinePage = ({ clothes }) => {
   return (
     <div>
+<     Header/>
       <TopCarousel clothes={clothes} />
       <BottomCarousel clothes={clothes} />
       <ShoesCarousel clothes={clothes} />
