@@ -1,0 +1,5 @@
+.disabled {
+    background-color: #ccc; /* Change this color to your desired color */
+    color: #888; /* Change this color to your desired color */
+    cursor: not-allowed;
+  }

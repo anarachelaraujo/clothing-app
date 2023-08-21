@@ -22,14 +22,10 @@ const App = () => {
 
   return (
     <Router>
-      <meta httpEquiv="Content-Security-Policy" content="script-src 'self' 'wasm-unsafe-eval' 'inline-speculation-rules' 'unsafe-inline'"></meta>
       <div>
         <div className="container">
           <Routes>
-          <Route
-              path="/"
-              element={<Home/>}
-            />
+            <Route path="/" element={<Home />} />
             <Route
               path="/addClothes"
               element={<AddPiecePage onAddClothing={addClothing} />}
@@ -44,16 +40,9 @@ const App = () => {
               path="/combine"
               element={<CombinePage clothes={clothes} />}
             />
-              <Route
-              path="/register"
-              element={<Register/>}
-            />
-               <Route
-              path="/login"
-              element={<Login/>}
-            />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
-          
         </div>
       </div>
     </Router>

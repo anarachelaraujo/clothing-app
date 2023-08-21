@@ -1,5 +1,8 @@
 {
-    "cSpell.ignoreWords": [
-        "jsonify"
-    ]
+  "cSpell.ignoreWords": ["jsonify"],
+  "cSpell.words": [
+    "fastapi",
+    "pydantic",
+    "uvicorn"
+  ]
 }
